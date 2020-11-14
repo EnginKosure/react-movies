@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Switch, Redirect, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import Navbar from './components/Navbar';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserHistory } from 'history';
+export const history = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router history={history}>
+      <Navbar />
+      <App />
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/" component={App} />
+        <Route path="/signup" component={App} />
+        <Route path="/profile" component={App} />
+        <Redirect from="*" to="/" />
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
