@@ -7,12 +7,6 @@ const Navbar = () => {
   return (
     <div className="Navbar">
       <nav className="navbar navbar-expand-lg navbar-light bg-light nav-menu">
-        <a className="navbar-brand">
-          <img
-            src="aplaudoLogoSimpleBlack900.png"
-            className="img-fluid logo-image"
-          />
-        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -27,8 +21,8 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <NavLink to="/signin" className="nav-link menu-item">
-                Sign in
+              <NavLink to="/home" className="nav-link menu-item">
+                Home
             </NavLink>
             </li>
             <li className="nav-item">
