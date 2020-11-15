@@ -5,9 +5,10 @@ import { Router, Switch, Redirect, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserHistory } from 'history';
-export const history = createBrowserHistory();
+const history = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,7 +18,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/" component={App} />
-        <Route path="/home" component={App} />
+        <Route path="/home" component={Home} />
         <Route path="/profile" component={App} />
         <Redirect from="*" to="/" />
       </Switch>
